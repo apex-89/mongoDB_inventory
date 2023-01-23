@@ -1,0 +1,13 @@
+const mongoose = require('mongoose');
+
+const itemSchema = new mongoose.Schema({
+    price: Number,
+    inventory: Number,
+    nextDelivery: Date,
+    deliveryAmt: Number,
+    name: String
+});
+
+const MyItems = mongoose.model('myitems', itemSchema);
+
+module.exports = MyItems;

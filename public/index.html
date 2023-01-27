@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="./index.js"></script>
+    <link rel="stylesheet" href="./index.css">
+    <title>Add To Storeroom</title>
+</head>
+<body>
+    <!-- <nav id="navbar">
+        <h1 id="search-button">Search</h1>
+        <h1 id="display-page-button">Display Food</h1>
+        <h1 id="delete">Delete Bad Data</h1>
+    </nav> -->
+    <div id="container">
+        <h1 id="stock">Inventory</h1>
+        <p id="upload-status"></p>
+        <form id="myForm">
+            <div class="input-container">
+                <label for="price-input">Price:</label>
+                <input type="number" id="price-input"/>
+            </div>
+            <div class="input-container">
+                <label for="inventory-input">Inventory Amount:</label>
+                <input type="number" id="inventory-input"/>
+            </div>
+            <div class="input-container">
+                <label for="deliveryDate-input">Date:</label>
+                <input type="date" id="date-input"/>
+            </div>
+            <div class="input-container">
+                <label for="deliverAmt-input">Delivery Amount:</label>
+                <input type="number" id="amt-input"/>
+            </div>
+            <div class="input-container">
+                <label for="name-input">Product Name:</label>
+                <input type="text" id="name-input"/>
+            </div>
+        </form>
+        <button id="submit-button">Add Product:</button>
+        <button id="clear-button">Click To Clear Inputs</button>
+    </div>
+    
+
+</body>
+</html>

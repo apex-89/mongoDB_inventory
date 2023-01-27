@@ -8,6 +8,6 @@ const itemSchema = new mongoose.Schema({
     name: String
 });
 
-const MyItems = mongoose.model('myitems', itemSchema);
+const MyItem = mongoose.model('myitems', itemSchema);
 
-module.exports = MyItems;
+module.exports = MyItem;

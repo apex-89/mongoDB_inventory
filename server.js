@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 
 // import object
-const MyItems = require('./models/items');
+const MyItem = require('./models/items');
 
 // calling express function
 const app = express();
@@ -37,7 +37,7 @@ mongoose.connection.once('open', () => {
 // route to create item/destructuring object
 app.post('/create_item', async (req,res) => {
     const {priceNumber: price, inventoryNumber: inventory, deliveryDate: nextDelivery, deliveryAmtNumber: deliveryAmt, nameString: name} = req.body;
-    let returnedValue = await MyItems.create({
+    let returnedValue = await MyItem.create({
         price,
         inventory,
         nextDelivery,
@@ -52,8 +52,8 @@ app.post('/create_item', async (req,res) => {
 });
 
 // get data and display on frontend
-app.get('/get_item', async (req,res) =>{
-    let response = await MyItems.find({});
+app.get('/get_items', async (req,res) =>{
+    let response = await MyItem.find({});
     console.log(response);
     res.json(response);
 });
